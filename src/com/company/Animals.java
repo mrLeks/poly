@@ -39,30 +39,22 @@ public class Animals {
     public void jump(double height){
         if(jumpLimit > 0 && height <= jumpLimit){
             System.out.println(this.name + " пробежал " + height + " метров");
-
         }
         else {
             System.out.println(this.name + " не сможет пробежать столько!");
         }
     }
 
-    public void animalInfo() {
-        System.out.println();
-    }
-
-    void info() {
+   public void info() {
         String isHungry = !hungry ? "после тренировки плотно покушал и доволен" : "после тренировки проголодался, но в тарелке нет еды!";
         System.out.println(name + ": " + isHungry);
     }
 
-    void eat(Plate plate) {
+   public void eat(Plate plate) {
         if (hungry && plate.reduce(appetite))
             hungry = false;
     }
-    public static void Main(String[] args){
-
-
-    }
+  
 }
 
 
