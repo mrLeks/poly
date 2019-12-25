@@ -34,18 +34,23 @@ public class Worker {
 
         for (Worker worker : personArray) if (worker.age > 40) worker.print();
 
-        Cat cat = new Cat("Барсик", 200.53, false, 1.54);
-        cat.catInfo();
-        Animals animals = new Animals();
-        animals.animalInfo();
-        Dog dog1 = new Dog("Шарик", 325.66, 10.87, 0.35);
-        Dog dog2 = new Dog("Мухтар", 578.2, 5,1.34);
-        dog1.dogInfo();
-        dog2.dogInfo();
+       Animals[] arrayOfAnimals = new Animals[4];
+       arrayOfAnimals[0] = new Cat("Барсик", 15);
+       arrayOfAnimals[1] = new Dog("Шарик", 0);
+       arrayOfAnimals[2] = new Cat("Мурзик", 10);
+       arrayOfAnimals[3] = new Cat("Пушок", 13);
 
+       Plate plate = new Plate(15);
 
-
-
+       for(Animals animals : arrayOfAnimals){
+            animals.run(150);
+            animals.jump(2.5);
+            animals.swim(5);
+            animals.eat(plate);
+            animals.info();
+        }
+        plate.addFood(50);
+        plate.info();
     }
 
 }
