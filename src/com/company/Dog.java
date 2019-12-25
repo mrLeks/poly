@@ -1,20 +1,18 @@
 package com.company;
 
 public class Dog extends Animals {
-    public double jump;
-    public double swim;
-    public double run;
-
-    public Dog(String name, double run, double swim, double jump ) {
-        this.name = name;
-        this.run = run;
-        this.swim = swim;
-        this.jump = jump;
+   
+    public Dog(String name, int appetite ) {
+        super("Пёс " + name);
+        this.runLimit = 500;
+        this.jumpLimit = 0.5;
+        this.swimLimit = 10;
+        this.appetite = appetite;
+        this.hungry = true;
     }
 
-    public void dogInfo() {
-        System.out.println("DogName: " + name  + " ||" + " пробежал: " + run +" ||" +
-                " проплыл: " + swim + " ||" + " прыгнул: " + jump + " метров");
+    public void info() {
+        System.out.println(name + " не голоден");
     }
 }
 
